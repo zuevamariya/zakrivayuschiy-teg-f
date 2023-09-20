@@ -148,6 +148,7 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   position: absolute;
+  z-index: 1;
   right: 24px;
   top: 29px;
   text-shadow: 
