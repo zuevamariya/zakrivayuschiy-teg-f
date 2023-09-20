@@ -215,7 +215,7 @@ or (-webkit-text-stroke: 1px var(--bg-color, #fff))) {
   margin: 27px 25px 25px;
 }
 
-.article__button{
+.article__button {
   height: 38px;
   margin-inline-end: 25px;
   margin-block-end: 25px;
