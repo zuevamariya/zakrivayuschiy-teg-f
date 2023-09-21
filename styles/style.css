@@ -37,7 +37,7 @@
   background-color: var(--bg-color, #fff);
   inline-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
   block-size: clamp(20.1875rem, 19.2852rem + 3.8498vw, 22.75rem);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   line-height: normal;
   text-transform: uppercase;
   padding-block: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 25px;
@@ -139,7 +139,7 @@
 }
 
 .article__picture-label {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   font-variation-settings: 'wght' var(--min-font-weight, 400);
   line-height: normal;
@@ -174,35 +174,35 @@ or (-webkit-text-stroke: 1px var(--bg-color, #fff))) {
   object-position: center;
 }
 
-.article__picture-card-filter1 {
+.article__picture-card_filter_brightness {
   filter: brightness(200%);
 }
 
-.article__picture-card-filter2 {
+.article__picture-card_filter_combo {
   filter: invert(1) brightness(200%) saturate(60%) hue-rotate(90deg);
 }
 
-.article__picture-card-filter3 {
+.article__picture-card_filter_blur {
   filter: blur(0.2rem);
 }
 
-.article__picture-card-filter4 {
+.article__picture-card_filter_opicity {
   filter: opacity(0.5);
 }
 
-.article__picture-card-filter5 {
+.article__picture-card_filter_grayscale {
   filter: grayscale(0.8);
 }
 
-.article__picture-card-filter6 {
+.article__picture-card_filter_invert {
   filter: invert(0.7);
 }
 
-.article__picture-card-filter7 {
+.article__picture-card_filter_hue-rotate {
   filter: hue-rotate(-90deg);
 }
 
-.article__picture-card-filter8 {
+.article__picture-card_filter_sepia {
   filter: sepia(80%);
 }
 
@@ -264,7 +264,7 @@ or (-webkit-text-stroke: 1px var(--bg-color, #fff))) {
 }
 
 .button__text {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   line-height: 90%; /* 12.6px */
   position: relative;
@@ -339,7 +339,7 @@ dialog::backdrop {
 
 .dialog__text {
   color: var(--accent-color, #000);
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -355,6 +355,21 @@ dialog::backdrop {
   inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
   background-color: transparent;
   border: 2px solid var(--accent-color, #000);
+  position: relative;
+}
+
+.dialog__content-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--accent-color, #000);
+  transition: width 0.5s ease-in-out;
+}
+
+.dialog__content-button:hover::before {
+  width: 100%;
 }
 
 @media (width < 376px) {

@@ -20,12 +20,12 @@
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header__title">
+      <a class="header__title">
         &lt;/html&gt;
-      </h1>
-      <h2 class="header__subtitle">
+      </a>
+      <h1 class="header__subtitle">
         закрывающий тег
-      </h2>
+      </h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -62,7 +62,7 @@
             &lt;/html&gt;
           </span>
           <img
-            class="article__picture-card article__picture-card-filter1"
+            class="article__picture-card article__picture-card_filter_brightness"
             src="./images/image.png"
             alt="Машина, стоящая в лесу, ночью"
           />
@@ -122,7 +122,7 @@
             &lt;/html&gt;
           </span>
           <img
-            class="article__picture-card article__picture-card-filter2"
+            class="article__picture-card article__picture-card_filter_combo"
             src="./images/image.png"
             alt="Машина, стоящая в лесу, ночью"
           />
@@ -183,7 +183,7 @@
             &lt;/html&gt;
           </span>
           <img
-            class="article__picture-card article__picture-card-filter3"
+            class="article__picture-card article__picture-card_filter_blur"
             src="./images/image.png"
             alt="Машина, стоящая в лесу, ночью"
           />
@@ -242,7 +242,7 @@
             &lt;/html&gt;
           </span>
           <img
-            class="article__picture-card article__picture-card-filter4"
+            class="article__picture-card article__picture-card_filter_opicity"
             src="./images/image.png"
             alt="Машина, стоящая в лесу, ночью"
           />
@@ -303,7 +303,7 @@
             &lt;/html&gt;
           </span>
           <img
-            class="article__picture-card article__picture-card-filter5"
+            class="article__picture-card article__picture-card_filter_grayscale"
             src="./images/image.png"
             alt="Машина, стоящая в лесу, ночью"
           />
@@ -364,7 +364,7 @@
             &lt;/html&gt;
           </span>
           <img
-            class="article__picture-card article__picture-card-filter6"
+            class="article__picture-card article__picture-card_filter_invert"
             src="./images/image.png"
             alt="Машина, стоящая в лесу, ночью"
           />
@@ -423,7 +423,7 @@
             &lt;/html&gt;
           </span>
           <img
-            class="article__picture-card article__picture-card-filter7"
+            class="article__picture-card article__picture-card_filter_hue-rotate"
             src="./images/image.png"
             alt="Машина, стоящая в лесу, ночью"
           />
@@ -483,7 +483,7 @@
             &lt;/html&gt;
           </span>
           <img
-            class="article__picture-card article__picture-card-filter8"
+            class="article__picture-card article__picture-card_filter_sepia"
             src="./images/image.png"
             alt="Машина, стоящая в лесу, ночью"
           />
@@ -559,11 +559,13 @@
             Вставьте дискету, чтобы продолжить
           </h2>
         </div>
-        <button class="dialog__text dialog__content-button" 
-          type="button" 
-          onclick="window['save-dialog'].close()">
-          ок
-        </button>
+        <form method="dialog">
+          <button class="dialog__text dialog__content-button">
+            <span class="button__text">
+              ок
+            </span>
+          </button>
+        </form>
       </div>
     </dialog>
     <script src="./scripts/like.js"></script>
